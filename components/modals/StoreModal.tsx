@@ -1,6 +1,6 @@
 "use client";
 
-import { useStoreModal } from "@/hooks/use-store-modal";
+import { useStoreModal } from "@/hooks/useStoreModal";
 import { Modal } from "@/components/ui/modal";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
