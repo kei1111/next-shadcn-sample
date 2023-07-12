@@ -6,7 +6,10 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
+  DialogTrigger,
 } from "@/components/ui/dialog";
+import { Button } from "./button";
+import { useStoreModal } from "@/hooks/useStoreModal";
 
 interface ModalProps {
   title: string;
@@ -28,9 +31,15 @@ export const Modal: React.FC<ModalProps> = ({
       onClose();
     }
   };
+  const storeModal = useStoreModal();
 
   return (
     <Dialog open={isOpen} onOpenChange={onChange}>
+      <DialogTrigger asChild>
+        <Button variant="outline" onClick={storeModal.onOpen}>
+          Edit Profile
+        </Button>
+      </DialogTrigger>
       <DialogContent>
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>

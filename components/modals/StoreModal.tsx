@@ -50,7 +50,7 @@ export const StoreModal = () => {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Name</FormLabel>
+                    <FormLabel>名前</FormLabel>
                     <FormControl>
                       <Input placeholder="store name" {...field} />
                     </FormControl>
@@ -60,9 +60,11 @@ export const StoreModal = () => {
               />
               <div className="flex items-center justify-end pt-4 w-full">
                 <Button variant="outline" onClick={storeModal.onClose}>
-                  Cancel
+                  キャンセル
                 </Button>
-                <Button type="submit">Continue</Button>
+                <Button type="submit" className="ml-2">
+                  保存
+                </Button>
               </div>
             </form>
           </Form>
